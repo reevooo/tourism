@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.6)
+    ),
+    url("../../images/61810.jpg"); /* صورة الخلفية */
+    background-size: 100% 100%; /* لجعل الصورة تغطي الخلفية بالكامل */
+    background-position: center center; /* مركز الصورة */
+}
+
+
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 15px;
+  }
+  .login-background {
+    display: flex;
+    justify-content: flex-end; /* لضبط محاذاة الفورم للناحية اليمنى */
+    padding-right: 50px; /* إضافة مسافة من اليمين */
+    width: 100%;
+}
+
+.card {
+    width: 450px; /* زيادة عرض الفورم */
+    background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px; /* زيادة الحشو الداخلي */
+}

@@ -1,0 +1,22 @@
+
+  .destination-details {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+  .carousel img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  iframe {
+    border-radius: 10px;
+  }
+  

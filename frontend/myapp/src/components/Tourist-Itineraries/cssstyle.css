@@ -1,0 +1,7 @@
+input[disabled] {
+    background-color: white !important; /* Set the background to white */
+    color: black !important; /* Set the text color to black */
+    opacity: 1 !important; /* Remove the default opacity for disabled fields */
+    border: 1px solid #ced4da; /* Ensure it has a standard border like other inputs */
+  }
+  
