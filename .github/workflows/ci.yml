@@ -1,4 +1,4 @@
-name: React CI
+name: Fullstack CI
 
 on:
   push:
@@ -17,18 +17,42 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Set up Node.js environment
-    - name: Set up Node.js
+    # List files for debugging
+    - name: List files in root
+      run: ls -la
+
+    # Setup Node.js for Frontend
+    - name: Set up Node.js for Frontend
       uses: actions/setup-node@v3
       with:
-        node-version: 16 # Specify the Node.js version your project uses
+        node-version: 16
 
-    # Install dependencies
-    - name: Install dependencies
+    # Install Frontend Dependencies
+    - name: Install Frontend Dependencies
+      working-directory: ./frontend
       run: npm install
 
-    # Run tests
-    - name: Run tests
+    # Run Frontend Tests
+    - name: Run Frontend Tests
+      working-directory: ./frontend
+      run: npm test
+      env:
+        CI: true
+
+    # Setup Node.js for Backend
+    - name: Set up Node.js for Backend
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    # Install Backend Dependencies
+    - name: Install Backend Dependencies
+      working-directory: ./backend
+      run: npm install
+
+    # Run Backend Tests
+    - name: Run Backend Tests
+      working-directory: ./backend
       run: npm test
       env:
         CI: true
