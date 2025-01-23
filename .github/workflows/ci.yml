@@ -31,7 +31,12 @@ jobs:
     - name: Install Frontend Dependencies
       working-directory: ./frontend/myapp
       run: npm install
-
+      
+    # Step 3: Navigate to the frontend and run npm audit fix --force
+    - name: Run npm audit fix --force in frontend
+      working-directory: ./frontend/myapp # Adjust this if needed
+      run: npm audit fix --force
+      
     # Run Frontend Tests
     - name: Run Frontend Tests
       working-directory: ./frontend/myapp
@@ -49,7 +54,12 @@ jobs:
     - name: Install Backend Dependencies
       working-directory: ./backend
       run: npm install
-
+      
+    # Step 4: Run npm audit fix --force in backend
+    - name: Run npm audit fix --force in backend
+      working-directory: ./backend # Adjust this if needed
+      run: npm audit fix --force
+      
     # Run Backend Tests
     - name: Run Backend Tests
       working-directory: ./backend
