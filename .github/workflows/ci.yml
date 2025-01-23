@@ -29,12 +29,12 @@ jobs:
 
     # Install Frontend Dependencies
     - name: Install Frontend Dependencies
-      working-directory: ./frontend
+      working-directory: ./frontend/myapp
       run: npm install
 
     # Run Frontend Tests
     - name: Run Frontend Tests
-      working-directory: ./frontend
+      working-directory: ./frontend/myapp
       run: npm test
       env:
         CI: true
