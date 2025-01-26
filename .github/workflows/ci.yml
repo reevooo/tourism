@@ -28,7 +28,7 @@ jobs:
         working-directory: ./frontend/myapp  # Adjust the directory if needed
         run: |
           npm install
-          npm install --save-dev react-test-renderer
+          npm create vite@latest
 
       # Set up Node.js for backend
       - name: Set up Node.js for backend
